@@ -1,0 +1,32 @@
+
+
+.sub-title{
+    font-weight: 500;
+    color: gray;
+}
+
+.login-container label{
+    font-weight:500;
+}
+
+.login-container .input-group-text {
+    color: blue;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-left: none;
+    cursor: pointer;
+}
+
+.login-container .input-group-field{
+    border-right: none;
+}
+
+.login-container .custom-btn{
+    background-color: #68548e;
+    border-color: #68548e;
+    width:100%
+}
+
+.custom-link{
+    font-weight: 500;
+}

@@ -1,0 +1,35 @@
+.main{
+    width: 100%;
+    min-height: 100vh;
+    background-color:#e6e6e6;
+}
+
+.auth-wrapper{
+    display:grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 70px 0;
+}
+
+.auth-inner-container{
+    background-color: white;
+    padding:40px 35px;
+    width: 35%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px 3px #ccc;
+}
+
+.logo-img-container{
+    width:100%;
+    position: relative;
+}
+
+.logo-img-container img{
+    width: 100%;
+    position: absolute;
+    top: -80px;
+    background: #fff;
+    padding: 0 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}

@@ -1,0 +1,33 @@
+.outer-404-container{
+    width: 100%;
+    min-height: 100vh;
+    background-color:#e6e6e6;
+    display:grid;
+    place-items: center;
+}
+.outer-404-container .inner-404-container{
+    text-align: center;
+}
+
+.outer-404-container .inner-404-container img{
+    max-width: 40%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.outer-404-container .inner-404-container h3{
+    margin-bottom: 20px;
+}
+
+.outer-404-container .inner-404-container button{
+    background-color: #68548e;
+    border-color: #68548e;
+}
+
+.outer-404-container .inner-404-container button:hover{
+    color: #68548e;
+    background-color: #fff;
+    border-color: #68548e;
+    box-shadow: 1px 1px 1px 1px #818181;
+}

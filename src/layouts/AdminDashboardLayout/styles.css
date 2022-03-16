@@ -1,0 +1,193 @@
+.main{
+    width: 100%;
+    background-color:#e6e6e6;
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+
+.dashboard-wrapper{
+    width: 100%;
+}
+
+.dashboard-wrapper header{
+    width: 100%;
+    background:#fff;
+    padding:20px 15px;
+    box-shadow: 0px 3px 7px -2px #818181;
+}
+
+.dashboard-wrapper header .header-row{
+    justify-content: flex-end;
+    align-items: center;
+    --bs-gutter-x: 0;
+}
+
+.dashboard-wrapper header .header-row .header-menu-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.dashboard-wrapper header .header-row .header-menu-div .dropdown--custom .menu-dropdown--row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dropdown--custom--main{
+    width: 45px;
+    display: inline-block;
+    height: 45px;
+}
+
+.dropdown--custom--main--notification{
+    margin-right: 20px;
+}
+
+.dropdown--custom--main .dropdown--custom{
+    border-color: #69558f;
+    color: #69558f;
+    background-color: #fff;
+    border-style: dashed;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    padding:0 !important;
+}
+.dropdown--custom--main .dropdown--custom--notification{
+    color: #000;
+    background-color: #fff;
+    border: 1px solid transparent;
+    width: 100%;
+    height: 100%;
+    padding:0 !important;
+    font-size: 23px;
+}
+
+.dropdown--custom--main .dropdown--custom:hover{
+    background-color: #69558f;
+    border-color: #69558f;
+}
+
+.dropdown--custom--main .dropdown--custom--notification:hover{
+    color: #69558f;
+    border: 1px solid transparent !important;
+    background-color: #fff !important;
+}
+
+.dropdown--custom--main .dropdown--custom:active{
+    background-color: #69558f;
+    border-color: #69558f;
+}
+
+.dropdown--custom--main .dropdown--custom--notification:active{
+    color: #69558f;
+    border: 1px solid transparent !important;
+    background-color: #fff !important;
+}
+
+.btn-primary:active, .show>.btn-primary.dropdown-toggle{
+    background-color: #69558f !important;
+    border-color: #69558f !important;
+}
+
+.dropdown-toggle::after{
+    display:none !important;
+}
+
+.dashboard-wrapper header .header-row .header-menu-div .dropdown--custom .menu-dropdown--row .avatar-dropdown{
+    width: 100%;
+}
+
+.dashboard-wrapper header .header-row .header-menu-div .dropdown--custom .menu-dropdown--row p{
+    margin-bottom: 0px;
+}
+
+.dashboard-wrapper .main-section{
+    width: 100%;
+}
+
+
+.dashboard-wrapper .main-section .section-row{
+    --bs-gutter-x: 0;
+}
+
+.dashboard-wrapper .main-section .section-row .section-menu-col{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    min-height: 100vh;
+    background: #fff;
+    box-shadow: 2px 0px 10px -3px #818181;
+}
+
+.dashboard-wrapper .main-section .section-row .section-menu-col .section-menu-div{
+    
+    width: 100%;
+    padding:20px 15px;
+
+}
+
+.dashboard-wrapper .main-section .section-row .section-menu-col .section-menu-div .section-logo-img-container{
+    width:100%;
+    position: relative;
+    border-bottom: 1px dashed #69558f;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+
+.dashboard-wrapper .main-section .section-row .section-menu-col .section-menu-div .section-logo-img-container img{
+    width: 100%;
+}
+
+.dashboard-wrapper .main-section .section-row .section-menu-col .section-menu-div .nav--menu{
+    font-weight: 500;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 15px;
+    padding:15px 10px;
+    border-radius:10px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.dashboard-wrapper .main-section .section-row .section-menu-col .section-menu-div .nav--menu--active, .dashboard-wrapper .main-section .section-row .section-menu-col .section-menu-div .nav--menu:hover{
+    color: #69558f;
+    background-color: #7d67a57c;
+    font-weight: 700;
+}
+
+.dashboard-wrapper .main-section .section-row .section-menu-col .section-menu-div .nav--menu .icon{
+    font-size: 20px;
+}
+
+.dashboard-wrapper .main-section .section-row .section-menu-col .section-menu-div .nav--menu p{
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    margin-left:10px;
+}
+
+.dashboard-wrapper .main-section .section-row .section-content-col{
+    padding:25px 25px;
+    padding-top: 115px;
+}
+
+.notification{
+    margin-right: 20px;
+    font-size: 23px;
+}
+
+.notification:hover{color:#69558f}

@@ -1,0 +1,57 @@
+.main-dashboard-content-form-data {
+    padding: 10px 20px;
+    display: block;
+}
+
+.main-dashboard-content-form-data .form-label {
+    font-weight: 700;
+}
+
+.main-dashboard-content-form-data  .ck.ck-editor__editable_inline{
+    height: 300px;
+}
+
+.main-dashboard-content-form-data  .attachment-container{
+    width:100%;
+    position: relative;
+}
+
+.main-dashboard-content-form-data  .attachment-container .aside--container{
+    width:100%;
+    margin-top: 20px;
+}
+
+.main-dashboard-content-form-data  .attachment-container .preview--main--container{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.main-dashboard-content-form-data  .attachment-container .preview--main--container div{
+    width:100px;
+    height: 100px;
+    padding:10px;
+    border:1px solid #eee;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.main-dashboard-content-form-data  .attachment-container .preview--main--container div img{
+    width:100%;
+}
+
+.rc-slider-handle{
+    border:solid 2px #69558f;
+}
+
+.main-dashboard-content-form-data  .custom-btn{
+    border:solid 1px #69558f;
+    background-color: #69558f;
+    padding: 0.475rem 1.95rem;
+}
