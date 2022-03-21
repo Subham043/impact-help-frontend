@@ -24,7 +24,7 @@ header{
 }
 
 .dashboard-wrapper header .header-row{
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     --bs-gutter-x: 0;
 }
@@ -148,6 +148,29 @@ header{
 
 .dashboard-wrapper .main-section .section-row .section-menu-col .section-menu-div .section-logo-img-container img{
     width: 100%;
+}
+
+.dashboard-wrapper .main-section .section-row .section-menu-col .section-menu-div .section-logo-img-mob-container{
+    width:100%;
+    position: relative;
+    border-bottom: 1px dashed #69558f;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-wrapper .main-section .section-row .section-menu-col .section-menu-div .section-logo-img-mob-container img{
+    width: 70%;
+}
+
+.dashboard-wrapper .main-section .section-row .section-menu-col .section-menu-div .section-logo-img-mob-container button, .hamMenu{
+    color: #68548e;
+    background: transparent;
+    outline: #68548e;
+    border: 1px solid #68548e;
 }
 
 .dashboard-wrapper .main-section .section-row .section-menu-col .section-menu-div .nav--menu{
