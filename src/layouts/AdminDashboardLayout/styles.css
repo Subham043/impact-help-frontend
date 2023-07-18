@@ -154,7 +154,7 @@ header{
     width:100%;
     position: relative;
     border-bottom: 1px dashed #69558f;
-    padding-bottom: 25px;
+    padding-bottom: 0;
     margin-bottom: 25px;
     display: flex;
     flex-wrap: wrap;
@@ -163,7 +163,7 @@ header{
 }
 
 .dashboard-wrapper .main-section .section-row .section-menu-col .section-menu-div .section-logo-img-mob-container img{
-    width: 70%;
+    width: 20%;
 }
 
 .dashboard-wrapper .main-section .section-row .section-menu-col .section-menu-div .section-logo-img-mob-container button, .hamMenu{

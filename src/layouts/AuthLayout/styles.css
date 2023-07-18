@@ -25,11 +25,14 @@
 }
 
 .logo-img-container img{
-    width: 100%;
+    width: auto;
     position: absolute;
     top: -80px;
     background: #fff;
     padding: 0 10px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    height: 100px;
+    object-fit: contain;
+    left: 33%;
 }

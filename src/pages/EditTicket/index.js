@@ -55,10 +55,9 @@ const Index = () => {
     const [email, setEmail] = useState('')
     const [emailError, setEmailError] = useState(false)
     const [emailErrorVal, setEmailErrorVal] = useState('')
-    const [course, setCourse] = useState('')
-    const [courseError, setCourseError] = useState(false)
-    const [courseErrorVal, setCourseErrorVal] = useState('')
-    const [issue, setIssue] = useState('1')
+    const [issue, setIssue] = useState('')
+    const [issueError, setIssueError] = useState(false)
+    const [issueErrorVal, setIssueErrorVal] = useState('')
     const [description, setDescription] = useState('')
     const [descriptionError, setDescriptionError] = useState(false)
     const [descriptionErrorVal, setDescriptionErrorVal] = useState('')
@@ -91,11 +90,10 @@ const Index = () => {
             const response = await axiosPrivate.get(`/ticket/view/${id}`);
             // console.log(response)
             setTitle(response?.data?.data?.title)
-            setCourse(response?.data?.data?.course)
+            setIssue(response?.data?.data?.type)
             setDescription(response?.data?.data?.description)
             setEmail(response?.data?.data?.email)
             setPriority(response?.data?.data?.priority)
-            setIssue((response?.data?.data?.type).toString())
             setImages(response?.data?.data?.images)
             hideLoader()
         } catch (err) {
@@ -196,8 +194,8 @@ const Index = () => {
         setTitleErrorVal('')
         setEmailError(false)
         setEmailErrorVal('')
-        setCourseError(false)
-        setCourseErrorVal('')
+        setIssueError(false)
+        setIssueErrorVal('')
         setImageError(false)
         setImageErrorVal('')
 
@@ -221,13 +219,13 @@ const Index = () => {
             return;
         }
 
-        if (course === '') {
-            setCourseError(true)
-            setCourseErrorVal('Please enter your course')
+        if (issue === '') {
+            setIssueError(true)
+            setIssueErrorVal('Please enter your issue')
             return;
-        } else if (!(/^[a-z 0-9~%.:_\@\-\/\&+=,]+$/i.test(course))) {
-            setCourseError(true)
-            setCourseErrorVal('Please enter a valid course')
+        } else if (!(/^[a-z 0-9~%.:_\@\-\/\&+=,]+$/i.test(issue))) {
+            setIssueError(true)
+            setIssueErrorVal('Please enter a valid issue')
             return;
         }
 
@@ -238,7 +236,6 @@ const Index = () => {
             formData.append('title', title);
             formData.append('email', email);
             formData.append('type', issue);
-            formData.append('course', course);
             formData.append('description', description);
             formData.append('priority', priority);
             files.map((item) => {
@@ -269,9 +266,6 @@ const Index = () => {
             }
             if (err?.response?.data?.errors?.priority) {
                 errorToast(err?.response?.data?.errors?.priority?.msg)
-            }
-            if (err?.response?.data?.errors?.course) {
-                errorToast(err?.response?.data?.errors?.course?.msg)
             }
             if (err?.response?.data?.errors?.description) {
                 errorToast(err?.response?.data?.errors?.description?.msg)
@@ -338,23 +332,15 @@ const Index = () => {
                 </div>
                 {titleError ? <p className="error mb-3">{titleErrorVal}</p> : null}
                 <div className="mb-3">
-                    <label className="form-label">Email (type in the same email id which you have enrolled for)</label>
+                    <label className="form-label">Email </label>
                     <input type="email" placeholder="Enter your email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} />
                 </div>
                 {emailError ? <p className="error mb-3">{emailErrorVal}</p> : null}
                 <div className="mb-3">
                     <label className="form-label">Issue Type</label>
-                    <select className="form-control" value={issue} onChange={(e) => setIssue(e.target.value)}>
-                        <option value="1">Billing Issue</option>
-                        <option value="2">Course Access Issue</option>
-                        <option value="3">Website Issue</option>
-                    </select>
+                    <input type="email" placeholder="Enter your issue" className="form-control" value={issue} onChange={(e) => setIssue(e.target.value)} />
                 </div>
-                <div className="mb-3">
-                    <label className="form-label">Course Enrolled For</label>
-                    <input type="email" placeholder="Enter your course" className="form-control" value={course} onChange={(e) => setCourse(e.target.value)} />
-                </div>
-                {courseError ? <p className="error mb-3">{courseErrorVal}</p> : null}
+                {issueError ? <p className="error mb-3">{issueErrorVal}</p> : null}
                 <div className="mb-3">
                     <label className="form-label">Description</label>
                     <CKEditor

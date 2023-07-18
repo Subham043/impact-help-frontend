@@ -19,7 +19,7 @@ import { useSelector } from 'react-redux'
 import { selectUser } from '../../redux/features/userSlice'
 import constant from '../../constant'
 import io from "socket.io-client";
-const socket = io('https://impact-server-api.herokuapp.com/', {
+const socket = io('http://localhost:8081/', {
     autoConnect: true,
     reconnection: true,
     reconnectionAttempts: 10,
@@ -37,8 +37,7 @@ const Index = () => {
     const user = useSelector(selectUser);
     const [title, setTitle] = useState('')
     const [email, setEmail] = useState('')
-    const [course, setCourse] = useState('')
-    const [issue, setIssue] = useState('1')
+    const [issue, setIssue] = useState('')
     const [description, setDescription] = useState('')
     const [priority, setPriority] = useState(1)
     const [status, setStatus] = useState(1)
@@ -73,11 +72,10 @@ const Index = () => {
             const response = await axiosPrivate.get(`/ticket/view/${id}`);
             // console.log(response)
             setTitle(response?.data?.data?.title)
-            setCourse(response?.data?.data?.course)
             setDescription(response?.data?.data?.description)
             setEmail(response?.data?.data?.email)
             setPriority(response?.data?.data?.priority)
-            setIssue((response?.data?.data?.type).toString())
+            setIssue((response?.data?.data?.type))
             setImages(response?.data?.data?.images)
             setStatus(response?.data?.data?.status)
             hideLoader()
@@ -145,13 +143,7 @@ const Index = () => {
     })
 
     const issueName = useCallback(() => {
-        if (issue === '1') {
-            return "Billing Issue"
-        } else if (issue === '2') {
-            return "Course Access Issue"
-        } else if (issue === '3') {
-            return "Website Issue"
-        }
+        return issue;
     }, [issue])
 
 
@@ -259,7 +251,6 @@ const Index = () => {
                                 <th>Title</th>
                                 <th>Email</th>
                                 <th>Issue</th>
-                                <th>Course</th>
                                 <th>Priority</th>
                                 <th>Status</th>
                             </tr>
@@ -270,7 +261,6 @@ const Index = () => {
                                 <td>{title}</td>
                                 <td>{email}</td>
                                 <td>{issueName()}</td>
-                                <td>{course}</td>
                                 <td><TablePriority status={priority} /></td>
                                 <td><TableStatus status={status} /></td>
 
